@@ -1,0 +1,136 @@
+
+.advice__title {
+    margin-bottom: 30px;
+    font-size: 61px;
+    line-height: 53px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.advice__item {
+    position: relative;
+    z-index: 1;
+    max-width: 570px;
+    border-radius: 3px;
+    transition: .3s;
+
+    &:hover {
+        transform: translate(-3px, 3px);
+
+        &::after {
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 3px;
+        left: -3px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: #19567a;
+        border-radius: 3px;
+        transition: .3s;
+    }
+
+    & + & {
+        margin-top: 30px;
+    }
+
+    &:nth-child(2n) {
+        & .advice__item-title {
+            color: #fff;
+        }
+
+        & .advice__item-info {
+            color: #fff;
+            background-color: #19567a;
+        }
+    }
+
+    &:nth-child(4) {
+        max-width: 100%;
+
+        &:hover {
+            transform: translate(0, 0);
+
+            &::after {
+                top: 3px;
+                left: -3px;
+            }
+        }
+    }
+
+    &:nth-child(5) {
+        max-width: 100%;
+    }
+}
+
+.advice__item-name {
+    position: absolute;
+    right: 265px;
+    bottom: calc(100% + 30px);
+    max-width: 130px;
+    font-size: 14px;
+    font-weight: 500;
+
+    & span {
+        font-size: 18px;
+        font-weight: 750;
+    }
+}
+
+.advice__item-media {
+    position: absolute;
+    right: -118px;
+    bottom: 100%;
+    width: 547px;
+    height: 752px;
+    background-image: url("../media/advice/human.png");
+    background-repeat: no-repeat;
+}
+
+.advice__item-info {
+    padding: 15px 25px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.advice__item-title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #f02b4c;
+}
+
+@media (max-width: 1030px) {
+    .advice__item-media {
+        display: none;
+    }
+
+    .advice__item {
+        max-width: 100%;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    .advice__item-name {
+        display: none;
+    }
+
+    .advice__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .advice__item-description {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}

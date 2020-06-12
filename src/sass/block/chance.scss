@@ -1,0 +1,179 @@
+
+.chance__title {
+    margin-bottom: 55px;
+    font-size: 60px;
+    line-height: 58px;
+    text-align: center;
+    text-transform: uppercase;
+
+    & mark {
+        color: #f02b4c;
+    }
+}
+
+.chance__box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 175px;
+}
+
+.chance__list {
+    max-width: 325px;
+
+    &:last-child {
+        & .chance__item {
+            padding-right: 30px;
+            padding-left: 85px;
+            text-align: left;
+
+            &::before {
+                right: auto;
+                left: 0;
+                box-shadow: 0 2px 50px 20px #000;
+            }
+
+            &::after {
+                right: auto;
+                left: 30px;
+            }
+        }
+    }
+}
+
+.chance__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 63px;
+    padding: 25px 85px 25px 30px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-align: right;
+    background-color: #d6503a;
+
+    & + & {
+        margin-top: 12px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 100%;
+        content: '';
+        box-shadow: 0 2px 50px 20px #000;
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        bottom: 0;
+        width: 43px;
+        height: 43px;
+        content: '';
+        background-image: url("../media/chance/check.png");
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+    }
+}
+
+.chance__product {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    margin-left: -13px;
+    transform: translateX(-50%);
+
+    &::before {
+        position: absolute;
+        bottom: -200px;
+        left: -116px;
+        z-index: -1;
+        width: 835px;
+        height: 424px;
+        content: '';
+        background-image: url("../media/product-berries-2.png");
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1030px) {
+    .chance__product {
+        max-width: 260px;
+        margin-left: -9px;
+
+        &::before {
+            bottom: -5px;
+            left: -57px;
+            max-width: 331px;
+            height: 130px;
+            background-size: cover;
+        }
+    }
+
+    .chance__list {
+        max-width: 275px;
+    }
+
+    .chance__box {
+        padding-bottom: 85px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chance__box {
+        flex-direction: column;
+        padding-bottom: 335px;
+    }
+
+    .chance__list {
+        max-width: 100%;
+
+        & + & {
+            margin-top: 12px;
+        }
+    }
+
+    .chance__item {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .chance__product::before {
+        bottom: -12px;
+        max-width: 290px;
+        height: 114px;
+    }
+
+    .chance__item {
+        padding: 10px 10px 10px 70px;
+        text-align: left;
+
+        &::after {
+            right: auto;
+            left: 15px;
+        }
+    }
+
+    .chance__list {
+        &:last-child {
+            & .chance__item {
+                padding: 10px 10px 10px 70px;
+
+                &::after {
+                    left: 15px;
+                }
+            }
+        }
+    }
+}

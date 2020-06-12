@@ -1,0 +1,120 @@
+
+.commits__title {
+    margin-bottom: 30px;
+    font-size: 61px;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.commits__box {
+    & .owl-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px !important;
+    }
+
+    & .owl-dot {
+        width: 15px !important;
+        height: 15px !important;
+        margin-right: 3px !important;
+        margin-left: 3px !important;
+        background-color: #000 !important;
+        border-radius: 50% !important;
+
+        &.active {
+            background-color: #c8a77a !important;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.commits__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px 23px;
+    margin: 42px 20px 20px;
+    border: 2px solid #000;
+}
+
+.commits__face {
+    position: absolute;
+    top: -43px;
+    width: 85px;
+    overflow: hidden;
+    border: 2px solid #1273be;
+    border-radius: 50%;
+}
+
+.commits__name {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1273be;
+}
+
+.commits__age {
+    margin-bottom: 20px;
+    font-weight: 750;
+}
+
+.commits__stars {
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+
+    & span {
+        display: inline-block;
+        width: 28px;
+        height: 27px;
+        background-image: url("../media/commits/star.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & span + span {
+            margin-left: 15px;
+        }
+    }
+}
+
+.commits__description {
+    line-height: 21px;
+}
+
+@media (max-width: 1030px) {
+    .commits__item {
+        width: 320px;
+        padding: 20px 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .commits__item {
+        width: auto;
+    }
+
+    .commits__title {
+        font-size: 47px;
+    }
+}
+
+@media (max-width: 480px) {
+    .commits__title {
+        font-size: 37px;
+    }
+
+    .commits__description {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .commits__item {
+        padding: 15px;
+    }
+}

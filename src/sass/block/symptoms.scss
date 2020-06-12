@@ -1,0 +1,143 @@
+
+.symptoms__subtitle {
+    margin-bottom: 30px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+
+    & span {
+        display: block;
+        font-weight: 700;
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+.symptoms__title {
+    max-width: 760px;
+    margin-right: auto;
+    margin-bottom: 90px;
+    margin-left: auto;
+    font-size: 71px;
+    line-height: 62px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.symptoms__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.symptoms__list {
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        align-items: flex-end;
+    }
+}
+
+.symptoms__list-item {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 4px;
+
+    & + & {
+        margin-top: 40px;
+    }
+
+    &:nth-child(1) {
+        max-width: 230px;
+    }
+
+    &:nth-child(2) {
+        max-width: 168px;
+    }
+
+    &:nth-child(3) {
+        max-width: 190px;
+    }
+
+    &:nth-child(4) {
+        max-width: 188px;
+    }
+
+    &:nth-child(5) {
+        max-width: 196px;
+    }
+
+    &:nth-child(6) {
+        max-width: 175px;
+    }
+
+    &:nth-child(7) {
+        max-width: 187px;
+    }
+
+    &:nth-child(8) {
+        max-width: 230px;
+    }
+
+    &:nth-child(2n) {
+        color: #fff;
+        background-color: #f02b4c;
+    }
+}
+
+.symptoms__product {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1030px) {
+    .symptoms__product {
+        max-width: 325px;
+    }
+}
+
+@media (max-width: 768px) {
+    .symptoms__product {
+        display: none;
+    }
+
+    .symptoms__list-item {
+        & + & {
+            margin-top: 20px;
+        }
+
+        &:nth-child(odd) {
+            width: calc(100% - 10px);
+            max-width: 100%;
+        }
+
+        &:nth-child(even) {
+            width: calc(100% - 10px);
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .symptoms__box {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .symptoms__list {
+        &:last-child {
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+    }
+
+    .symptoms__subtitle {
+        font-size: 21px;
+    }
+}

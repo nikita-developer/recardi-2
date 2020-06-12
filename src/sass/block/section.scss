@@ -1,0 +1,77 @@
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &_face {
+        background-image: url("../media/section/face.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    &_symptoms {
+        position: relative;
+        background-image: url("../media/section/symptoms.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &_saveAndChance {
+        background-image: url("../media/section/saveAndChance.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    &_advice {
+        overflow: hidden;
+        background-image: url("../media/section/advice.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &_face-footer {
+        background-image: url("../media/section/face-footer.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}
+
+.section__title {
+    font-family: 'MontserratAlternates', sans-serif;
+    font-weight: 900;
+}
+
+@media (max-width: 1030px) {
+    .section__title {
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        &_face {
+            background-image: url("../media/section/face-768.jpg");
+            background-size: cover;
+        }
+
+        &_advice {
+            background-image: url("../media/section/advice-768.jpg");
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        &_commits {
+            padding-bottom: 0;
+        }
+    }
+
+    .section__title {
+        font-size: 32px;
+    }
+}
